@@ -12,6 +12,8 @@
     "target": "es5",
     "typeRoots": [
       "../node_modules/@types"
-    ]
+    ],
+    //Added this to make lazy loading work link http://angularjs.blogspot.dk/2016/09/angular-2-rc6_1.html
+    "genDir": "./ngfactory"
   }
 }

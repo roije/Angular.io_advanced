@@ -9,7 +9,7 @@ import { Crisis,
 @Component({
   template: `
     <h3 highlight>Crisis List</h3>
-    <div *ngFor='let crisis of crisises | async'>
+    <div *ngFor='let crisis of crisises'>
       <a routerLink="{{'../' + crisis.id}}">{{crisis.id}} - {{crisis.name}}</a>
     </div>
   `
