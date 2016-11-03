@@ -1,33 +1,18 @@
-/**
- * Created by roije on 03/11/2016.
- */
 import { NgModule }           from '@angular/core';
-import { BrowserModule }      from '@angular/platform-browser';
+import { CommonModule }       from '@angular/common';
+import { FormsModule }        from '@angular/forms';
 
-import { HighlightDirective } from './highlight.directive';
-import { UserService }        from '../user.service';
-
-/* Contact Imports */
-import
-{ ContactComponent }   from './contact.component';
-/*
- { ContactComponent }   from './contact/contact.component';
- */
-import { ContactService }     from './contact.service';
 import { AwesomePipe }        from './awesome.pipe';
 
+import { ContactComponent }   from './contact.component';
+import { ContactService }     from './contact.service';
+import { HighlightDirective } from './highlight.directive';
 
-import { FormsModule }        from '@angular/forms';
-import {CommonModule} from "@angular/common";
+import { ContactRoutingModule }   from './contact-routing.module';
 
 @NgModule({
-  imports: [ CommonModule,  FormsModule ],
-  declarations: [
-    HighlightDirective,
-    AwesomePipe,
-    ContactComponent,
-  ],
-  providers: [ ContactService ],
-  exports: [ ContactComponent ]
+  imports:      [ CommonModule, FormsModule, ContactRoutingModule ],
+  declarations: [ ContactComponent, HighlightDirective, AwesomePipe ],
+  providers:    [ ContactService ]
 })
 export class ContactModule { }
