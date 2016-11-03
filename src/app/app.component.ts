@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
 
 @Component({
+  //moduleId: module.id,
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  template: `
+    <app-title [subtitle]="subtitle"></app-title>
+    <app-contact></app-contact>
+  `
 })
 export class AppComponent {
-  title = 'app works!';
+  subtitle = '(v1)';
 }
