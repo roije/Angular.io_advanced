@@ -3,24 +3,24 @@ import { BrowserModule }      from '@angular/platform-browser';
 
 /* App Root */
 import { AppComponent }       from './app.component';
-import { HighlightDirective } from './highligt.directive';
-import { TitleComponent }     from './title.component';
-import { UserService }        from './user.service';
+import { TitleComponent }     from './core/title.component';
+import { UserService }        from './core/user.service';
 
 /* Feature Modules */
 import { ContactModule }      from './contact/contact.module';
 
 /* Routing Module */
 import { AppRoutingModule }   from './app-routing.module';
+import {CoreModule} from "./core/core.module";
 
 @NgModule({
   imports:      [
     BrowserModule,
     ContactModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CoreModule.forRoot({userName: 'Miss Marple'}),
   ],
-  providers:    [ UserService ],
-  declarations: [ AppComponent, HighlightDirective, TitleComponent ],
+  declarations: [ AppComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

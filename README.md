@@ -1,5 +1,9 @@
 # AngularioAdvanced
 
+##About
+
+Angular Modules help organize an application into cohesive blocks of functionality.
+
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.16.
 
 ## Development server

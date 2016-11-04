@@ -3,7 +3,7 @@
  */
 
 import { HeroService } from './hero.service';
-import { UserService } from '../user.service';
+import { UserService } from '../core/user.service';
 import {Component} from "@angular/core/src/metadata/directives";
 
 @Component({
